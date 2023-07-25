@@ -40,7 +40,11 @@
             on September 24, 2019</p>
         </div>
         <hr>
-        <% } %>
+        <a href="/post/edit/<%= blogs._id %>"> Update</a>
+        <div></div>
+        <form method="POST" action="/blog/<%= blogs[i]._id %>?_method=DELETE">
+          <button type="submit" class="btn btn-danger" onclick="return confirm('Emin misiniz?')">Kaydı Sil</button>
+        </form>        <% } %>
 
         <!-- Pager -->
         <div class="clearfix">
